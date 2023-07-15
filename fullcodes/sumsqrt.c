@@ -11,12 +11,12 @@ int main(int argc, char *argv[]) {
   double sum=0, seconds;
   long i;
   clock_t begin, end;
-  srand(time(NULL));
   begin=clock();
-  for (i=0; i<ntrials; i++) {
-    sum+=sqrt(i);
+  for (i=0; i<=ntrials; i++) {
+    double x=i;
+    sum+=sqrt(x);
   }
   end=clock();
   seconds=(double)(end-begin)/CLOCKS_PER_SEC;
-printf("sumsqrt.c: Sum of first %ld numbers= %15.7lf time= %lf\n",ntrials,sum,seconds);
+  printf("sumsqrt.c: Sum sqrt first %ld numbers= %15.7lf time= %lf\n",ntrials,sum,seconds);
 }
